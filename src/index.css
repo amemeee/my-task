@@ -1,13 +1,203 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-size: 1rem;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #283618;
+  background-color: whitesmoke;
+}
+
+.app {
+  width: 50vh;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  /* background-color: #4044c9; */
+}
+
+h1 {
+  text-align: center;
+  font-size: 6rem;
+  padding: 2rem 0 2rem 0 ;
+}
+
+.add-form {
+  /* background-color: #dda15e; */
+  padding: 2.8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.add-form h3 {
+  margin-right: 2rem;
+  font-size: 1rem;
+}
+
+.add-form div {
+  margin: 1rem 0;
+}
+
+.title{
+
+  color:white;
+  background-color: #0d47a1;
+}
+
+.add-form div select {
+  margin-right: 1rem;
+}
+
+
+select,
+input {
+  /* background-color: #fefae0; */
+  background-color: whitesmoke;
+  font-family: inherit;
+  color:grey;
+  border: 0.5px black solid;
+  border-radius: 3rem;
+  padding: 0.3rem 4rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+button {
+  background-color: #0d47a1;
+  border-radius: 3rem;
+  padding: 0.3rem 1.3rem;
+  font-size: 1.4rem;
+  color: #fefae0;
+  font-weight: bold;
+}
+
+.list {
+  /* background-image: url(paperbg.jpg); */
+  background-repeat: repeat-y;
+  background-size: 155%;
+  /* background-attachment: local; */
+  color: #fefae0;
+  padding: 1rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3.2rem;
+  /* align-items: left; */
+  overflow-y: scroll;
+}
+
+.list ul {
+  list-style: none;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: -1rem;
+}
+
+.list li {
+  color: #283618;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: left;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.list input[type='checkbox'] {
+  height: 2rem;
+  width: 2rem;
+  accent-color: #283618;
+  margin-right: 1.3rem;
+}
+
+.list li button {
+  /* display: flex;
+  align-items: right;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 2.6rem;
+  padding: 0;
+  width: 3rem;
+  height: 3rem; */
+  background-color: red;
+  /* margin-left: 1rem; */
+}
+
+.actions {
+
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.actions button,
+.actions select {
+  padding: 0.8rem 2.4rem;
+  font-size: 1.4rem;
+  margin: 0 0.8rem;
+}
+
+.stats {
+  background-color: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 3.2rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.remove {
+  text-align: right;
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+
+/* Define the layout for list items */
+.item-list {
+  list-style: none;
+  padding: 0;
+}
+
+.item-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Style for checkbox */
+.item-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Style for item name */
+.item-list span {
+  flex: 1; /* This will make the span take remaining space */
+}
+
+/* Style for remove button */
+.item-list button.remove {
+  /* margin-left: auto; */
+  /* margin-left: 140px; */
 }
